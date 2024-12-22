@@ -5,15 +5,21 @@
   align-items: left;
   margin: 5% 3%;
   font-family: Arial, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
 .userCard {
   display: flex;
   flex-direction: column;
-  background-color: #fff;
+  background-color: var(--card-background-color);
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px; 
+  padding: 20px;
+  transition: background-color 0.3s;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto 20px;
 }
 
 .userCard img {
@@ -26,40 +32,140 @@
 
 .userCard h1 {
   margin: 10px 0;
-  color: #333;
-  font-size: 24px; 
+  color: var(--text-color);
+  font-size: 24px;
+  text-align: center;
 }
 
 .userCard h3 {
   margin: 5px 0;
   color: #666;
-  font-size: 18px; 
+  font-size: 18px;
+  text-align: center;
 }
 
 .skills {
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
   margin-bottom: 20px;
-  }
+  justify-content: center;
+}
 
 .skill {
-  background-color: #00ced1;
+  background-color: var(--skill-background-color);
   color: #fff;
   padding: 2%;
   border-radius: 20px;
   font-size: 0.9rem;
   text-align: center;
-  }
+  transition: background-color 0.3s;
+}
 
 .footer {
   width: 100%;
-  text-align: left;
+  text-align: center;
   position: fixed;
   bottom: 0;
-  padding: 10px; 
+  padding: 10px;
+  background-color: var(--background-color);
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .footer p {
-  font-size: 16px; 
-  color: #666;
+  font-size: 16px;
+  color: var(--text-color);
+  margin: 0;
+}
+
+.themeButton {
+  background-color: var(--skill-background-color);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  transition: background-color 0.3s, outline 0.3s;
+  display: block;
+  margin: 0 auto;
+}
+
+.themeButton:hover {
+  outline: 2px solid var(--outline-color);
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin: 3% 2%;
+  }
+
+  .userCard {
+    padding: 15px;
+  }
+
+  .userCard img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .userCard h1 {
+    font-size: 20px;
+  }
+
+  .userCard h3 {
+    font-size: 16px;
+  }
+
+  .skills {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skill {
+    width: 100%;
+    text-align: center;
+  }
+
+  .footer p {
+    font-size: 14px;
+  }
+
+  .themeButton {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    margin: 2% 1%;
+  }
+
+  .userCard {
+    padding: 10px;
+  }
+
+  .userCard img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .userCard h1 {
+    font-size: 18px;
+  }
+
+  .userCard h3 {
+    font-size: 14px;
+  }
+
+  .footer p {
+    font-size: 12px;
+  }
+
+  .themeButton {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
 }
