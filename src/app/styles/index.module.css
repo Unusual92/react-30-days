@@ -1,0 +1,65 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: left;
+  margin: 5% 3%;
+  font-family: Arial, sans-serif;
+}
+
+.userCard {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px; 
+}
+
+.userCard img {
+  margin: 0 auto;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.userCard h1 {
+  margin: 10px 0;
+  color: #333;
+  font-size: 24px; 
+}
+
+.userCard h3 {
+  margin: 5px 0;
+  color: #666;
+  font-size: 18px; 
+}
+
+.skills {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  }
+
+.skill {
+  background-color: #00ced1;
+  color: #fff;
+  padding: 2%;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  text-align: center;
+  }
+
+.footer {
+  width: 100%;
+  text-align: left;
+  position: fixed;
+  bottom: 0;
+  padding: 10px; 
+}
+
+.footer p {
+  font-size: 16px; 
+  color: #666;
+}
